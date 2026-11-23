@@ -1390,7 +1390,7 @@ class BeeGameView(context: Context) : View(context) {
 
         drawJoystick(c)
         actionButton(c, stingRect, "ЖАЛО", Color.parseColor("#FFB32E"), 0f, pressed[0])
-        actionButton(c, dashRect, "РЫВОК", Color.parseColor("#36B7D8"), player.dashCd / max(1f, tryDashCooldown()))
+        actionButton(c, dashRect, "РЫВОК", Color.parseColor("#36B7D8"), player.dashCd / max(1f, tryDashCooldown()), active = player.dash > 0f)
         actionButton(c, ultRect, "ГНЕВ РОЯ", Color.parseColor("#E0562A"), 1f - ult / 100f, ultTime > 0f)
         actionButton(c, pauseRect, "II", Color.parseColor("#7A5A2A"), 0f, paused)
     }
