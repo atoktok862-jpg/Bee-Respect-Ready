@@ -48,7 +48,6 @@ class MainActivity : Activity() {
     override fun onResume() {
         super.onResume()
         isPaused = false
-        gameView.onHostResume()
         try {
             if (mediaPlayer != null && mediaPlayer?.isPlaying == false) {
                 mediaPlayer?.start()
@@ -66,7 +65,6 @@ class MainActivity : Activity() {
             }
         } catch (_: Exception) {
         }
-        gameView.onHostPause()
         super.onPause()
     }
 
